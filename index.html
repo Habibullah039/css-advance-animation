@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Animation</title>
+    <style>
+
+
+        @keyframes cricket {
+
+            0% {
+
+                transform: rotate(0deg);
+            }
+
+            100% {
+
+                transform: rotate(-50deg);
+                transform-origin: top right;
+            }
+        }
+
+
+        @keyframes cricball {
+
+            0% {
+
+                transform: translate(0px);
+            }
+
+            100%{
+
+                transform: translate(800px , -200px);
+            }
+        }
+
+        .field{
+            padding-top: 50px;
+            border: 1px solid black;
+        }
+        .ball {
+
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 20px;
+            position: relative;
+            left: 315px;
+            animation: cricball 2s ease-out 2.1s infinite  alternate;
+            animation-play-state: running;
+        }
+
+        .bat {
+            animation: cricket 2s ease-in  0.1s  infinite alternate;
+            animation-play-state: running;
+
+        }
+
+        
+
+
+       
+    </style>
+</head>
+<body>
+    
+
+        <div class="field">
+
+            <img class="bat" src="images/bat.png" width="300px" height="300px" alt="">
+            <div class="ball"></div>
+
+        </div>
+
+</body>
+</html>
